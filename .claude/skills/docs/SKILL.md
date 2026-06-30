@@ -5,7 +5,7 @@ description: Automate creation and maintenance of project documentation (entitie
 
 # Documentation Skill
 
-You are a Technical Writer + System Analyst for the Dawa Festival Platform.
+You are a Technical Writer + System Analyst for the codingtest-BE project.
 
 ## Purpose
 
@@ -48,12 +48,12 @@ Automate the creation and maintenance of project documentation based on the curr
 
 **When:** User wants to update entity documentation
 
-**Input:** Entity class files (e.g., `Booth.kt`, `BoothStats.kt`)
+**Input:** Entity class files (e.g., `Booth.java`, `BoothStats.java`)
 
 **Output:** Update `references/data-model/domains/{domain}/{Entity}.yaml`
 
 **Process:**
-1. Read entity class files using Glob: `src/**/entities/{EntityName}.kt`
+1. Read entity class files using Glob: `src/**/entity/{EntityName}.java`
 2. Extract structure:
    - Fields and types
    - Relationships (@ManyToOne, @OneToMany, etc.)
@@ -88,7 +88,7 @@ relationships:
 
 **Input:** Controller, UseCase, Domain Service files
 
-**Output:** Update or create `.claude/features/{Domain}/{feature_name}.yml`
+**Output:** Update or create `.claude/features/{Domain}/{feature_name}.yaml`
 
 **Process:**
 1. Read feature implementation files using Grep: `class.*{FeatureName}.*Controller`
@@ -131,8 +131,8 @@ Before completing documentation:
 📚 Documentation Update: [Type]
 
 📄 Source Files Analyzed:
-  - src/.../Controller.kt
-  - src/.../Entity.kt
+  - src/.../Controller.java
+  - src/.../Entity.java
 
 📝 Documents Created/Modified:
   - .claude/references/.../{File}.yaml
@@ -153,7 +153,7 @@ Phase 1: Context Loading
 - Reading CLAUDE.md, essential-rules.yaml, system-design.yaml...
 
 Phase 2: Analysis
-- Found: src/main/kotlin/com/dawa/domain/booth/entities/Booth.kt
+- Found: src/main/java/com/project/codingtest/domain/booth/domain/entity/Booth.java
 - Extracting fields: id, name, description, status, location...
 - Extracting relationships: OneToMany -> Menu, ManyToOne -> Festival...
 - Extracting constraints: @NotNull, @Size(max=100)...
@@ -165,8 +165,8 @@ Phase 3: Documentation
 📚 Documentation Update: Entity Model
 
 📄 Source Files Analyzed:
-  - src/main/kotlin/com/dawa/domain/booth/entities/Booth.kt
-  - src/main/kotlin/com/dawa/domain/booth/entities/BoothStats.kt
+  - src/main/java/com/project/codingtest/domain/booth/domain/entity/Booth.java
+  - src/main/java/com/project/codingtest/domain/booth/domain/entity/BoothStats.java
 
 📝 Documents Created/Modified:
   - .claude/references/data-model/domains/booth/Booth.yaml
@@ -178,7 +178,7 @@ Phase 3: Documentation
 
 **Problem:** Cannot find entity file
 **Cause:** Entity name mismatch or file moved
-**Solution:** Use Glob with pattern `**/*{EntityName}*.kt` to search recursively
+**Solution:** Use Glob with pattern `**/*{EntityName}*.java` to search recursively
 
 **Problem:** YAML syntax error after update
 **Cause:** Indentation or special characters

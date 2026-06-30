@@ -5,7 +5,7 @@ description: Automate complete feature development from context loading through 
 
 # Feature Development Skill
 
-You are a Backend Developer for the Dawa Festival Platform.
+You are a Backend Developer for the codingtest-BE project.
 
 ## Purpose
 
@@ -49,8 +49,8 @@ Analyze user request to identify:
 
 - `references/data-model/domains/{SecondaryDomain}/*.yaml` - ONLY IF cross-domain validation or foreign key reference
   required
-- `references/conventions/testing-guide.md` - When writing tests
-- `references/conventions/coding-style.md` - When unsure about style
+- `references/conventions/testing-guide.yaml` - When writing tests
+- `references/conventions/coding-style.yaml` - When unsure about style
 
 **FORBIDDEN:**
 
@@ -90,7 +90,7 @@ Analyze user request to identify:
 3. **Follow System Design:**
     - Adhere to layer architecture (Controller → UseCase → Domain Service → Repository)
     - Follow API naming conventions from `core/system-design.yaml`
-    - Use Static Factory Method for DTOs (see `application-layer.md`)
+    - Use Static Factory Method for DTOs (see `references/conventions/coding-style.yaml`)
 
 ### Phase 3: Implementation
 
@@ -263,7 +263,7 @@ public enum {Name}ErrorCode implements ErrorCodeInterface {
 - Happy path (successful case)
 - Edge cases (boundary values)
 - Error cases (validation failures, business rule violations)
-- See `references/conventions/testing-guide.md` for details
+- See `references/conventions/testing-guide.yaml` for details
 
 **Run Tests:**
 
@@ -280,7 +280,7 @@ public enum {Name}ErrorCode implements ErrorCodeInterface {
 1. Compile: `./gradlew compileJava`
 2. Run tests: `./gradlew test --tests "*{FeatureName}*"`
 3. Build: `./gradlew build`
-4. Check code style (manual review against `coding-style.md`)
+4. Check code style (manual review against `coding-style.yaml`)
 
 ## Validation Checklist
 
@@ -339,7 +339,7 @@ Phase 1: Context Loading
 - Loading references/data-model/domains/order/*.yaml...
 - Loading references/data-model/domains/booth/*.yaml...
 - Loading references/data-model/domains/menu/*.yaml...
-- Loading references/conventions/layers/application-layer.md...
+- Loading references/conventions/coding-style.yaml...
 
 Phase 2: Feature Design
 - No spec file provided
@@ -419,7 +419,7 @@ Phase 3: Implementation
 **Cause:** Syntax error, missing imports, or type mismatch
 **Solution:**
 
-1. Read error message: `./gradlew compileKotlin`
+1. Read error message: `./gradlew compileJava`
 2. Fix syntax errors
 3. Add missing imports
 4. Check type compatibility (especially with DTOs and entities)
@@ -441,7 +441,7 @@ Phase 3: Implementation
 - [ ] Tests written and passing (happy path + edge cases + error cases)
 - [ ] Build successful
 - [ ] DTOs use Static Factory Method pattern
-- [ ] Code follows `essential-rules.yaml` and `coding-style.md`
+- [ ] Code follows `essential-rules.yaml` and `coding-style.yaml`
 - [ ] Feature matches spec exactly (no over-engineering)
 
 ## Best Practices

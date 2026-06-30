@@ -97,7 +97,7 @@ EOF
 【 FEATURE 스킬 필수 절차 】
 1. 불변 스펙(Immutable Spec) 작성 및 승인
 2. 기존 패턴 준수 (conventions/ 참조)
-3. 테스트 우선 작성 (Kotest)
+3. 테스트 우선 작성 (JUnit 5)
 4. 단계별 구현 (Controller → UseCase → Repository)
 
 ⚠️  주의: 스펙 승인 전 구현 금지, Over-engineering 금지

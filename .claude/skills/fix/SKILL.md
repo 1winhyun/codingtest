@@ -5,7 +5,7 @@ description: Automate bug fix workflow from root cause analysis to fix and regre
 
 # Bug Fix Skill
 
-You are a Debugger + Fixer for the Dawa Festival Platform.
+You are a Debugger + Fixer for the codingtest-BE project.
 
 ## Purpose
 
@@ -27,12 +27,12 @@ Automate the bug fix workflow from context loading through root cause analysis t
 1. `memory.md` - Check Known Issues (prevent duplicate work)
 2. `CLAUDE.md` - Project overview
 3. `core/essential-rules.yaml` - Core rules and tech stack
-4. `references/conventions/testing-guide.md` - Testing conventions
+4. `references/conventions/testing-guide.yaml` - Testing conventions
 
 **CONDITIONAL READ:**
 - **Domain Entities:** `references/data-model/domains/{domain}.yaml` (if bug is domain-related)
 - **Enums:** `references/data-model/enums.yaml` (if bug involves status/state transitions)
-- **Code Style:** `references/conventions/coding-style.md` (to maintain consistency in fix)
+- **Code Style:** `references/conventions/coding-style.yaml` (to maintain consistency in fix)
 - **Related Tests:** Existing test files for the buggy component
 
 ### Phase 2: Root Cause Analysis
@@ -146,7 +146,7 @@ Which strategy do you prefer?
 1. Add new test case:
    - Use JUnit 5 with @Test and @DisplayName
    - Use Korean @DisplayName (e.g., "이미 대기 중인 회원인 경우")
-   - Follow `references/conventions/testing-guide.md`
+   - Follow `references/conventions/testing-guide.yaml`
 2. Verify test fails before fix (confirms bug reproduction)
 3. Verify test passes after fix
 4. Run all tests: `./gradlew test`
@@ -215,7 +215,7 @@ AI:
 Phase 1: Context Loading
 - Reading memory.md... (checking Known Issues)
 - Reading CLAUDE.md, essential-rules.yaml...
-- Reading testing-guide.md...
+- Reading testing-guide.yaml...
 - Loading waiting.yaml for entity structure...
 
 Phase 2: Root Cause Analysis
@@ -287,7 +287,7 @@ Phase 3: Fix & Test
 **Problem:** Multiple similar bugs in codebase
 **Cause:** Same pattern repeated across files
 **Solution:**
-1. Use Grep to find similar patterns: `references/conventions/coding-style.md`
+1. Use Grep to find similar patterns: `references/conventions/coding-style.yaml`
 2. Fix all instances in one PR
 3. Document the pattern in memory.md to prevent future occurrences
 

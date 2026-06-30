@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Code Review Skill
 
-You are a Multi-Perspective Code Reviewer for the Dawa Festival Platform.
+You are a Multi-Perspective Code Reviewer for the codingtest-BE project.
 
 ## Purpose
 
@@ -54,8 +54,7 @@ You will sequentially perform two distinct review perspectives:
 - **Target Code:** Files to be reviewed (use Glob if directory/pattern provided)
 - **Related Tests:** Corresponding test files to verify coverage
 - **Domain Models:** `references/data-model/domains/{domain}/*.yaml` (if reviewing domain logic)
-- **Layer Conventions:** `references/conventions/layers/*.md` (based on layer being reviewed)
-- **Coding Style:** `references/conventions/coding-style.md` (for style consistency checks)
+- **Coding Style:** `references/conventions/coding-style.yaml` (for style consistency checks, including layer-specific patterns)
 
 **Input Analysis:**
 
@@ -107,7 +106,7 @@ gh pr diff 123
 
 **5. Convention Adherence**
 - Follows `essential-rules.yaml`
-- Matches existing code style (`coding-style.md`)
+- Matches existing code style (`coding-style.yaml`)
 - Proper package structure
 - Import organization
 

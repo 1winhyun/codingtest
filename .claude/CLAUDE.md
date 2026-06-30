@@ -10,10 +10,8 @@
 - `core/system-design.yaml`: Architecture, API, Entity Rules
 
 ### 3. References (Lazy Load)
-- `references/conventions/coding-style.yaml`: Kotlin idioms, naming, DI basics
-- `references/conventions/layers/`: Layer-specific guides
-  - `application-layer.md`: UseCase & DTO patterns (Static Factory Method)
-- `references/conventions/testing-guide.yaml`: Kotest practices
+- `references/conventions/coding-style.yaml`: Java idioms, naming, DI basics, UseCase & DTO patterns (Static Factory Method)
+- `references/conventions/testing-guide.yaml`: JUnit 5 + Mockito practices
 - `references/data-model/`: Domain Entities
 
 ### 4. Docs (Read when writing/reviewing specs)

@@ -25,8 +25,8 @@ if [[ "$tool_name" != "Edit" && "$tool_name" != "Write" && "$tool_name" != "Note
     exit 0
 fi
 
-# Check if modified file is Kotlin source
-if [[ ! "$file_path" == *.kt ]]; then
+# Check if modified file is Java source
+if [[ ! "$file_path" == *.java ]]; then
     exit 0
 fi
 

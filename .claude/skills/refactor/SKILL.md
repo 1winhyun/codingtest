@@ -5,7 +5,7 @@ description: Improve code structure, readability, or performance without changin
 
 # Refactor Skill
 
-You are a Code Quality Engineer for the Dawa Festival Platform.
+You are a Code Quality Engineer for the codingtest-BE project.
 
 ## Purpose
 
@@ -31,7 +31,7 @@ Improve code structure, readability, or performance without changing external be
 1. `CLAUDE.md` - Project overview
 2. `core/essential-rules.yaml` - Non-negotiable rules
 3. `core/system-design.yaml` - Architecture rules (check for violations)
-4. `references/conventions/coding-style.md` - Code style standards
+4. `references/conventions/coding-style.yaml` - Code style standards
 
 **CONDITIONAL READ:**
 - **Target Code:** The file(s) to be refactored
@@ -127,7 +127,7 @@ Which approach do you prefer?
 **IF** no tests exist:
 1. **STOP** refactoring
 2. Write tests first to capture current behavior
-3. Follow `references/conventions/testing-guide.md`
+3. Follow `references/conventions/testing-guide.yaml`
 4. Verify tests pass with current code
 5. **THEN** proceed with refactoring
 
@@ -146,7 +146,7 @@ Which approach do you prefer?
 - Make ONE refactoring at a time (don't combine multiple patterns)
 - Keep changes small and focused
 - Maintain existing behavior exactly
-- Follow `essential-rules.yaml` and `coding-style.md`
+- Follow `essential-rules.yaml` and `coding-style.yaml`
 - Preserve all edge case handling
 
 **Common Refactoring Examples:**
@@ -229,7 +229,7 @@ Before completing refactor:
 - [ ] Build successful: `./gradlew build`
 - [ ] No behavior changes (confirmed by tests)
 - [ ] No API contract changes
-- [ ] Code follows `essential-rules.yaml` and `coding-style.md`
+- [ ] Code follows `essential-rules.yaml` and `coding-style.yaml`
 - [ ] Architectural violations fixed (if that was the goal)
 - [ ] Code is more readable/maintainable than before
 
@@ -271,7 +271,7 @@ AI:
 
 Phase 1: Context Loading
 - Reading CLAUDE.md, essential-rules.yaml, system-design.yaml...
-- Reading coding-style.md...
+- Reading coding-style.yaml...
 - Reading OrderUseCase.java...
 
 Phase 2: Analysis
@@ -387,7 +387,7 @@ Final validation:
 - [ ] All existing tests pass (no behavior changes)
 - [ ] Build successful
 - [ ] No API contract changes
-- [ ] Follows `essential-rules.yaml` and `coding-style.md`
+- [ ] Follows `essential-rules.yaml` and `coding-style.yaml`
 - [ ] Architectural violations fixed (if applicable)
 - [ ] Each refactoring step validated incrementally
 
